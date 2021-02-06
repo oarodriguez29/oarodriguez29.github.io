@@ -71,7 +71,7 @@
 											<dt>Cedula de Identidad</dt>
 											<dd><em>V - 19.608.212</em></dd>
 											<dt>Edad</dt>
-											<dd id="ed"></dd>
+											<dd><em id="ed"></em></dd>
 										</dl>
 						      </div>
 						    </div>
@@ -83,7 +83,7 @@
 											<dt>Nacionalidad</dt>
 											<dd><em>Venezonala.</em></dd>
 											<dt>Fecha Nacimiento</dt>
-											<dd id="fn"><em>10/08/1988</em></dd>
+											<dd><em id="fn">10/08/1988</em></dd>
 											<dt>Dirección</dt>
 											<dd><em>Venezuela, Maracay - Estado Aragua.</em></dd>
 										</dl>
@@ -282,6 +282,7 @@ $(document).ready(function(){
 
             $fn = $('#fn').html();
             fecha = $fn;
+console.log('fec ',fecha);
             var hoy = new Date();
             var cumpleanos = new Date(fecha);
             var edad = hoy.getFullYear() - cumpleanos.getFullYear();
