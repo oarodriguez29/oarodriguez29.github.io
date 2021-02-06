@@ -275,6 +275,25 @@
 	var anio = new Date().getFullYear();
 	var element = document.getElementById('cp');
 	element.textContent = '© '+ anio +' Copyright - ';
+
+$(document).ready(function(){
+              
+        function calcularEdad($fn) {
+
+            $fn = $('#fn').html();
+            fecha = $fn;
+            var hoy = new Date();
+            var cumpleanos = new Date(fecha);
+            var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+            var m = hoy.getMonth() - cumpleanos.getMonth();
+
+            if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+                edad--;
+            }
+            $('#ed').html(edad);
+        }
+
+	calcularEdad();
 </script>
 </body>
 </html>
